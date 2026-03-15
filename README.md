@@ -52,3 +52,6 @@ Based on the selected difficulty level (**Easy, Medium, Hard**), a certain numbe
 ### **For Tic-Tac-Toe**
 ```bash
 python tic_tac_toe.py
+### **For Sudoku**
+```bash
+python sudoku.py
