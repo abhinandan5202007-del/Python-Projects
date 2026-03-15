@@ -1,4 +1,3 @@
-#this is the code for tic tac toe
 """ 
 Concept: This program creates a Tic-Tac-Toe game using Python and the Tkinter library. A 3×3 board is made using a list and 
 shown with buttons on the screen. Two players play the game by clicking the buttons to place “O” or “X”.The program checks that 
