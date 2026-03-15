@@ -1,7 +1,13 @@
+"""
+Concept: This program creates a Sudoku game in Python. First, it generates a valid solved Sudoku board using a backtracking algorithm 
+that fills numbers while following Sudoku rules (no repetition in rows, columns, or 3×3 boxes). Based on the chosen difficulty level, 
+some numbers are shown as clues while the remaining cells are left empty. The user then enters values to complete the puzzle. 
+The program checks inputs, prevents filling already given cells, displays the board after each move, and finally verifies 
+whether the user’s solution matches the correct Sudoku solution.
+"""
 import random
-
-SIZE = 9
-BOX = 3
+Size = 9
+Box = 3
 
 def create_unsolved_board():
     c = []
@@ -13,9 +19,9 @@ def create_unsolved_board():
     return c
 def create_empty_board():
     b=[]
-    for i in range(SIZE):
+    for i in range(Size):
         row = []
-        for j in range(SIZE):
+        for j in range(Size):
             row.append(0)
         b.append(row)
 
@@ -23,29 +29,29 @@ def create_empty_board():
 
 def is_safe(board, row, col, num):
     # Check row
-    for c in range(SIZE):
+    for c in range(Size):
         if board[row][c] == num:
             return False
 
     # Check column
-    for r in range(SIZE):
+    for r in range(Size):
         if board[r][col] == num:
             return False
 
     # Check 3x3 box
-    start_row = row - row % BOX
-    start_col = col - col % BOX
+    start_row = row - row % Box
+    start_col = col - col % Box
 
-    for r in range(start_row, start_row + BOX):
-        for c in range(start_col, start_col + BOX):
+    for r in range(start_row, start_row + Box):
+        for c in range(start_col, start_col + Box):
             if board[r][c] == num:
                 return False
 
     return True
 
 def find_empty_cell(board):
-    for row in range(SIZE):
-        for col in range(SIZE):
+    for row in range(Size):
+        for col in range(Size):
             if board[row][col] == 0:
                 return row, col
     return None
@@ -53,7 +59,7 @@ def find_empty_cell(board):
 def solve_board(board):
     empty = find_empty_cell(board)
     if not empty:
-        return True   # board completely filled
+        return True   # board filled
 
     row, col = empty
 
