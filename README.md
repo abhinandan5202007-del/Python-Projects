@@ -48,10 +48,3 @@ Based on the selected difficulty level (**Easy, Medium, Hard**), a certain numbe
 1. Save the **Tic-Tac-Toe** and **Sudoku** programs as separate Python files.  
 2. Open a **terminal or command prompt** in the project folder.  
 3. Run the desired game.
-
-### **For Tic-Tac-Toe**
-```bash
-python tic_tac_toe.py
-### **For Sudoku**
-```bash
-python sudoku.py
