@@ -1,9 +1,9 @@
 #this is the code for tic tac toe
-""" Concept : we will create a total of 9 tuples within
-the give parent list to access the elements of the grid.
-Then we will create a function which will contain 3 checking cases  for column , diagonal , row
-We will make 2 user input different and the user will enter only the row and column number
-To c
+""" 
+Concept: This program creates a Tic-Tac-Toe game using Python and the Tkinter library. A 3×3 board is made using a list and 
+shown with buttons on the screen. Two players play the game by clicking the buttons to place “O” or “X”.The program checks that 
+a player cannot overwrite a filled cell. After every move, it checks rows, columns, and diagonals to see if someone has won. 
+It also counts the moves to detect a draw. When the game ends, all buttons are disabled, and the result is shown.
 """
 import tkinter as tk
 Li=[
