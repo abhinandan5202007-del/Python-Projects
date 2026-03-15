@@ -1,2 +1,2 @@
 # Python-Projects
-This repository tracks my python projects .
+This repository tracks my Python projects.
